@@ -22,6 +22,8 @@
 		E171D59D2B27EDF1008AAE25 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D59C2B27EDF1008AAE25 /* Weather.swift */; };
 		E171D59F2B27EE42008AAE25 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D59E2B27EE42008AAE25 /* WeatherViewController.swift */; };
 		E171D5A12B280E14008AAE25 /* MapDirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5A02B280E14008AAE25 /* MapDirectionsViewController.swift */; };
+		E171D5A32B281AEC008AAE25 /* HistorySectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5A22B281AEC008AAE25 /* HistorySectionTableViewController.swift */; };
+		E171D5A52B281B01008AAE25 /* HistorySectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5A42B281B01008AAE25 /* HistorySectionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		E171D59C2B27EDF1008AAE25 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E171D59E2B27EE42008AAE25 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		E171D5A02B280E14008AAE25 /* MapDirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDirectionsViewController.swift; sourceTree = "<group>"; };
+		E171D5A22B281AEC008AAE25 /* HistorySectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySectionTableViewController.swift; sourceTree = "<group>"; };
+		E171D5A42B281B01008AAE25 /* HistorySectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySectionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 				E171D5632B27CDE2008AAE25 /* SceneDelegate.swift */,
 				E171D5652B27CDE2008AAE25 /* ViewController.swift */,
 				E171D5672B27CDE2008AAE25 /* Main.storyboard */,
+				E171D5A22B281AEC008AAE25 /* HistorySectionTableViewController.swift */,
+				E171D5A42B281B01008AAE25 /* HistorySectionTableViewCell.swift */,
 				E171D5A02B280E14008AAE25 /* MapDirectionsViewController.swift */,
 				E171D59C2B27EDF1008AAE25 /* Weather.swift */,
 				E171D59E2B27EE42008AAE25 /* WeatherViewController.swift */,
@@ -280,6 +286,8 @@
 				E171D59F2B27EE42008AAE25 /* WeatherViewController.swift in Sources */,
 				E171D5662B27CDE2008AAE25 /* ViewController.swift in Sources */,
 				E171D5622B27CDE2008AAE25 /* AppDelegate.swift in Sources */,
+				E171D5A52B281B01008AAE25 /* HistorySectionTableViewCell.swift in Sources */,
+				E171D5A32B281AEC008AAE25 /* HistorySectionTableViewController.swift in Sources */,
 				E171D5992B27E877008AAE25 /* NewsTableViewCell.swift in Sources */,
 				E171D5642B27CDE2008AAE25 /* SceneDelegate.swift in Sources */,
 				E171D5972B27E7E5008AAE25 /* NewsTableViewController.swift in Sources */,

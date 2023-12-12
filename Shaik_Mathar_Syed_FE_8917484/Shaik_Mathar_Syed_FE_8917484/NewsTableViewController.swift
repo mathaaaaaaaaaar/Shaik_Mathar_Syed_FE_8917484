@@ -17,6 +17,7 @@ class NewsTableViewController: UITableViewController {
             var description: String
             var author: String
             var source: String
+            var cityName: String
         }
     // Define the NewsAPIResponse struct to match the NewsAPI JSON structure
 
@@ -80,8 +81,9 @@ class NewsTableViewController: UITableViewController {
 
                 // Extract relevant information and populate the newsData array
                 self.newsData = newsAPIResponse.articles.map {
-                    News(title: $0.title, description: $0.description, author: $0.author ?? "", source: $0.source.name)
+                    News(title: $0.title, description: $0.description, author: $0.author ?? "", source: $0.source.name, cityName: cityName)
                 }
+                self.saveNewsToUserDefaults()
 
                 // Update UI on the main thread
                 DispatchQueue.main.async {
@@ -94,6 +96,20 @@ class NewsTableViewController: UITableViewController {
 
         // Start the data task
         task.resume()
+    }
+
+    func saveNewsToUserDefaults() {
+        // Include cityName in the dictionary to be saved
+        let encodedData = newsData.map {
+            [
+                "title": $0.title,
+                "description": $0.description,
+                "author": $0.author,
+                "source": $0.source,
+                "cityName": $0.cityName
+            ]
+        }
+        UserDefaults.standard.set(encodedData, forKey: "savedNewsData")
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -151,5 +167,35 @@ class NewsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // Adjust the cell height based on your design
         return 220.0
+    }
+}
+
+extension NewsTableViewController.News {
+    init?(fromDict data: [String: Any]) {
+        guard
+            let title = data["title"] as? String,
+            let description = data["description"] as? String,
+            let author = data["author"] as? String,
+            let source = data["source"] as? String,
+            let cityName = data["cityName"] as? String // Include cityName in the initialization
+        else {
+            return nil
+        }
+
+        self.title = title
+        self.description = description
+        self.author = author
+        self.source = source
+        self.cityName = cityName // Set cityName
+    }
+
+    var toDict: [String: Any] {
+        return [
+            "title": title,
+            "description": description,
+            "author": author,
+            "source": source,
+            "cityName": cityName // Include cityName in the dictionary
+        ]
     }
 }
